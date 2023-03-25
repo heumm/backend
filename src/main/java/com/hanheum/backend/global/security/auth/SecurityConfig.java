@@ -1,4 +1,4 @@
-package com.hanheum.backend.security.auth;
+package com.hanheum.backend.global.security.auth;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

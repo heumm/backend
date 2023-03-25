@@ -15,6 +15,8 @@ public class UserService {
     private final UserRepository userRepository;
 
     public void save(UserRequestDto requestDto) {
+        //유저정보를 저장
+        //저장 전 중복 체크
         User user = User.builder()
                 .email(requestDto.getEmail())
                 .password(requestDto.getPassword())
