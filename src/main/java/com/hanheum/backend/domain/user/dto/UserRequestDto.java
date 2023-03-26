@@ -16,4 +16,12 @@ public class UserRequestDto {
         this.email = email;
         this.password = password;
     }
+
+    @Override
+    public String toString() {
+        return "UserRequestDto{" +
+                "email='" + email + '\'' +
+                ", password='" + password + '\'' +
+                '}';
+    }
 }

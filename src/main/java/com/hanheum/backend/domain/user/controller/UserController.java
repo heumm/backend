@@ -26,7 +26,7 @@ public class UserController {
 
     @PostMapping("/api/v1/user")
     public ResponseEntity<Objects> signUp(@RequestBody UserRequestDto requestDto) {
-//        log.info("input data === {}", requestDto.toString());
+        log.info("REQUEST DATA:: {}", requestDto);
         userService.save(requestDto);
         return ResponseEntity.ok().build();
     }
