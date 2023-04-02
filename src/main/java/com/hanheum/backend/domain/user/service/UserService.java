@@ -9,6 +9,7 @@ import com.hanheum.backend.global.exception.BusinessException;
 import com.hanheum.backend.global.exception.BusinessStatus;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 
@@ -17,6 +18,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class UserService {
 
+    private final PasswordEncoder passwordEncoder;
     private final UserRepository userRepository;
 
     public void save(UserRequestDto requestDto) {
@@ -27,7 +29,7 @@ public class UserService {
         });
         User user = User.builder()
                 .email(requestDto.getEmail())
-                .password(requestDto.getPassword())
+                .password(passwordEncoder.encode(requestDto.getPassword()))
                 .provider(Provider.OUR)
                 .role(Role.USER)
                 .build();
