@@ -10,24 +10,29 @@ sourceCompatibility = '17'
 
 repositories {
 	mavenCentral()
+	jcenter()
 }
 
 dependencies {
-	implementation 'org.springframework.boot:spring-boot-starter-web'
-	testImplementation 'org.springframework.boot:spring-boot-starter-test'
-	// JPA
-	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	implementation 'org.springframework.boot:spring-boot-starter-web:3.0.4'
 	// security
-	compileOnly 'org.springframework.boot:spring-boot-starter-security'
-	// JWT
-	implementation 'io.jsonwebtoken:jjwt:0.9.1'
+	implementation 'org.springframework.boot:spring-boot-starter-security:3.0.4'
+	// JPA
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa:3.0.4'
 	// DB
-	compileOnly 'org.mariadb.jdbc:mariadb-java-client:2.5.2'
+	implementation 'org.mariadb.jdbc:mariadb-java-client:3.1.2'
 	// lombok
 	compileOnly 'org.projectlombok:lombok:1.18.26'
 	annotationProcessor 'org.projectlombok:lombok:1.18.26'
 	testCompileOnly 'org.projectlombok:lombok:1.18.26'
 	testAnnotationProcessor 'org.projectlombok:lombok:1.18.26'
+	// JWT
+	implementation 'io.jsonwebtoken:jjwt-api:0.11.5'
+	implementation 'io.jsonwebtoken:jjwt-impl:0.11.5'
+	implementation 'io.jsonwebtoken:jjwt-jackson:0.11.5'
+
+	testImplementation 'org.springframework.boot:spring-boot-starter-test:3.0.4'
+	testImplementation 'org.springframework.security:spring-security-test'
 }
 
 test {
