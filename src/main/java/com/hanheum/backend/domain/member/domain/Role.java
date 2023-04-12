@@ -1,4 +1,4 @@
-package com.hanheum.backend.domain.user.domain;
+package com.hanheum.backend.domain.member.domain;
 
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;

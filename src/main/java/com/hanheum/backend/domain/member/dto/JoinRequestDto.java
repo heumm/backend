@@ -1,4 +1,4 @@
-package com.hanheum.backend.domain.user.dto;
+package com.hanheum.backend.domain.member.dto;
 
 import lombok.Builder;
 import lombok.Getter;
@@ -6,13 +6,13 @@ import lombok.NoArgsConstructor;
 
 @Getter
 @NoArgsConstructor
-public class UserRequestDto {
+public class JoinRequestDto {
 
     private String email;
     private String password;
 
     @Builder
-    public UserRequestDto(String email, String password) {
+    public JoinRequestDto(String email, String password) {
         this.email = email;
         this.password = password;
     }
